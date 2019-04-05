@@ -21,10 +21,33 @@ const app = (() => {
       // TODO 2.3 - display a Notification
       if (Notification.permission == 'granted') {
         navigator.serviceWorker.getRegistration().then(reg => {
+            const startwarsVibration = [
+                500, 110, 500, 110,
+                450, 110, 200, 110,
+                170, 40, 450, 110,
+                200, 110, 170, 40,
+                500 ];
+            const options = {
+                body: 'First notification!',
+                icon: 'assets/android-chrome-192x192.png',
+                vibrate: startwarsVibration,
+                data: {
+                  dateOfArrival: Date.now(),
+                  primaryKey: 1
+                },
+              
+                actions: [
+                    {action: 'explore', title: 'Go to the site',
+                      icon: 'images/checkmark.png'},
+                    {action: 'close', title: 'Close the notification',
+                      icon: 'images/xmark.png'},
+                  ]
+              
+                // TODO 5.1 - add a tag to the notification
+              
+              };
       
-          // TODO 2.4 - Add 'options' object to configure the notification
-      
-          reg.showNotification('Thank You For Subscribing!');
+          reg.showNotification('Thank You For Subscribing!', options);
         });
       }
   
