@@ -2,7 +2,8 @@ const cacheName = 'cache-v1';
 const precacheResources = [
   '/',
   'index.html',
-  'dist/style.css',
+  'css/style.css',
+  'js/main.js',
   'manifest.json',
   'https://source.unsplash.com/bZZp1PmHI0E/1600x900',
   'https://source.unsplash.com/VRxo0yY-gyM/1600x900',
