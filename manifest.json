@@ -1,6 +1,7 @@
 {
     "name": "Renzo Mayer - Developer",
     "short_name": "RM",
+    "gcm_sender_id": "115138743722",
     "icons": [
         {
             "src": "/assets/android-chrome-192x192.png",

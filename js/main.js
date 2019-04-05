@@ -7,26 +7,32 @@ const app = (() => {
     const notifyButton = document.querySelector('.js-notify-btn');
     const pushButton = document.querySelector('.js-push-btn');
   
+      // check for notification support
+
+
     if (!('Notification' in window)) {
         console.log('This browser does not support notifications!');
         return;
-      }
-  
+    }
+
+    //request permission to show notifications
     Notification.requestPermission(status => {
         console.log('Notification permission status:', status);
     });
 
     function displayNotification() {
   
-      // TODO 2.3 - display a Notification
+      //display a Notification
       if (Notification.permission == 'granted') {
         navigator.serviceWorker.getRegistration().then(reg => {
-            const startwarsVibration = [
-                500, 110, 500, 110,
-                450, 110, 200, 110,
-                170, 40, 450, 110,
-                200, 110, 170, 40,
-                500 ];
+            // const startwarsVibration = [
+            //     500, 110, 500, 110,
+            //     450, 110, 200, 110,
+            //     170, 40, 450, 110,
+            //     200, 110, 170, 40,
+            //     500 ];
+
+            //Add 'options' object to configure the notification
             const options = {
                 body: 'First notification!',
                 icon: 'assets/android-chrome-192x192.png',
@@ -35,7 +41,7 @@ const app = (() => {
                   dateOfArrival: Date.now(),
                   primaryKey: 1
                 },
-              
+              //add actions to the notification
                 actions: [
                     {action: 'explore', title: 'Go to the site',
                       icon: 'images/checkmark.png'},
@@ -55,8 +61,28 @@ const app = (() => {
   
     function initializeUI() {
   
-      // TODO 3.3b - add a click event listener to the "Enable Push" button
+      // add a click event listener to the "Enable Push" button
       // and get the subscription object
+      pushButton.addEventListener('click', () => {
+        pushButton.disabled = true;
+        if (isSubscribed) {
+          unsubscribeUser();
+        } else {
+          subscribeUser();
+        }
+      });
+      
+      swRegistration.pushManager.getSubscription()
+      .then(subscription => {
+        isSubscribed = (subscription !== null);
+        updateSubscriptionOnServer(subscription);
+        if (isSubscribed) {
+          console.log('User IS subscribed.');
+        } else {
+          console.log('User is NOT subscribed.');
+        }
+        updateBtn();
+      });
   
     }
   
@@ -64,13 +90,45 @@ const app = (() => {
   
     function subscribeUser() {
   
-      // TODO 3.4 - subscribe to the push service
+      // subscribe to the push service
+      swRegistration.pushManager.subscribe({
+        userVisibleOnly: true
+      })
+      .then(subscription => {
+        console.log('User is subscribed:', subscription);
+        updateSubscriptionOnServer(subscription);
+        isSubscribed = true;
+        updateBtn();
+      })
+      .catch(err => {
+        if (Notification.permission === 'denied') {
+          console.warn('Permission for notifications was denied');
+        } else {
+          console.error('Failed to subscribe the user: ', err);
+        }
+        updateBtn();
+      });
   
     }
   
     function unsubscribeUser() {
   
-      // TODO 3.5 - unsubscribe from the push service
+      // unsubscribe from the push service
+      swRegistration.pushManager.getSubscription()
+      .then(subscription => {
+        if (subscription) {
+          return subscription.unsubscribe();
+        }
+      })
+      .catch(err => {
+        console.log('Error unsubscribing', err);
+      })
+      .then(() => {
+        updateSubscriptionOnServer(null);
+        console.log('User is unsubscribed');
+        isSubscribed = false;
+        updateBtn();
+      });
   
     }
   
@@ -132,14 +190,15 @@ const app = (() => {
   
         navigator.serviceWorker.register('sw.js')
         .then(swReg => {
-          console.log('Service Worker is registered', swReg);
+          console.log('Service worker registered! 😎', swReg);
   
           swRegistration = swReg;
   
-          // TODO 3.3a - call the initializeUI() function
+          //call the initializeUI() function
+          initializeUI();
         })
         .catch(err => {
-          console.error('Service Worker Error', err);
+          console.error('😥 Service worker registration failed: ', err);
         });
       });
     } else {

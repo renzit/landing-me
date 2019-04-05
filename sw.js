@@ -2,6 +2,7 @@ const cacheName = 'cache-v1';
 const precacheResources = [
   '/',
   'index.html',
+  'landing-push-1.html',
   'css/style.css',
   'js/main.js',
   'manifest.json',
@@ -40,3 +41,83 @@ self.addEventListener('fetch', event => {
       })
     );
 });
+
+
+//Handle the notificationclose event
+self.addEventListener('notificationclose', event => {
+    const notification = event.notification;
+    const primaryKey = notification.data.primaryKey;
+  
+    console.log('Closed notification: ' + primaryKey);
+    notification.close();
+});
+  
+
+  //Handle the notificationclick event
+  self.addEventListener('notificationclick', event => {
+
+    // open a custom page
+    const notification = event.notification;
+    const primaryKey = notification.data.primaryKey;
+    const action = event.action;
+    if (action === 'close') {
+        notification.close();
+    } else {
+        clients.openWindow('/landing-push-'+ primaryKey +'.html');
+        notification.close();
+    }
+    console.log('Navigted notification: ' + primaryKey);
+  });
+
+  //add push event listener
+//   self.addEventListener('push', event => {
+//     const options = {
+//       body: 'This notification was generated from a push!',
+//       icon: 'assets/android-chrome-192x192.png',
+//       vibrate: [100, 50, 100],
+//       data: {
+//         dateOfArrival: Date.now(),
+//         primaryKey: 1
+//       },
+//       actions: [
+//         {action: 'explore', title: 'Go to the site',
+//           icon: 'images/checkmark.png'},
+//         {action: 'close', title: 'Close the notification',
+//           icon: 'images/xmark.png'},
+//       ]
+//     };
+  
+//     event.waitUntil(
+//       self.registration.showNotification('Push Notification', options)
+//     );
+//   });
+
+self.addEventListener('push', event => {
+    let body;
+  
+    if (event.data) {
+      body = event.data.text();
+    } else {
+      body = 'Default body';
+    }
+  
+    const options = {
+      body: body,
+      icon: 'assets/android-chrome-192x192.png',
+      vibrate: [100, 50, 100],
+      data: {
+        dateOfArrival: Date.now(),
+        primaryKey: 1
+      },
+      actions: [
+        {action: 'explore', title: 'Go to the site',
+          icon: 'images/checkmark.png'},
+        {action: 'close', title: 'Close the notification',
+          icon: 'images/xmark.png'},
+      ]
+    };
+  
+    event.waitUntil(
+      self.registration.showNotification('Push Notification', options)
+    );
+  });
