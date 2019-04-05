@@ -30,7 +30,7 @@ const app = (() => {
             const options = {
                 body: 'First notification!',
                 icon: 'assets/android-chrome-192x192.png',
-                vibrate: startwarsVibration,
+                vibrate: [100, 50, 100],
                 data: {
                   dateOfArrival: Date.now(),
                   primaryKey: 1
