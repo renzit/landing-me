@@ -19,6 +19,14 @@ const app = (() => {
     function displayNotification() {
   
       // TODO 2.3 - display a Notification
+      if (Notification.permission == 'granted') {
+        navigator.serviceWorker.getRegistration().then(reg => {
+      
+          // TODO 2.4 - Add 'options' object to configure the notification
+      
+          reg.showNotification('Thank You For Subscribing!');
+        });
+      }
   
     }
   
