@@ -1,172 +1,555 @@
+
 <!DOCTYPE html>
-<html lang="en">
-
+<html dir="ltr" lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Renzo Mayer</title>
-    <meta name="description" content="Full Stack Web Developer. See 'About' and 'Services' to read more.">
-    <link rel="canonical" href="https://www.renzomayer.dev" />
-    <link rel="alternate" href="https://www.renzomayer.dev" hreflang="en" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
 
-    <link rel="manifest" href="/manifest.json">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Renzo Mayer">
-    <meta name="apple-mobile-web-app-title" content="Renzo Mayer">
-    <meta name="msapplication-navbutton-color" content="black">
-    <meta name="theme-color" content="black">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="msapplication-starturl" content="/index.html">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135980720-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+	<!-- Stylesheets
+	============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700,900|Playfair+Display:400,700" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
 
-        gtag('config', 'UA-135980720-1');
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "Renzo Mayer",
-      "jobTitle": "Software Developer",
-      "email": "rmayer.dev@gmail.com",
-      "url": "https://www.renzomayer.dev"
-    }
-    </script>
+	<!-- Resume Specific Stylesheet -->
+	<link rel="stylesheet" href="demos/resume/resume.css" type="text/css" />
+	<link rel="stylesheet" href="demos/resume/css/fonts.css" type="text/css" />
+	<!-- / -->
+
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" href="css/colors.php?color=7B6ED6" type="text/css" />
+
+	<!-- Document Title
+	============================================= -->
+	<title>Renzo Mayer | Software Developer</title>
+
 </head>
 
-<body>
-    <section id="installBanner" class="banner">
-        <button id="installBtn">Install app</button>
-    </section>
-    <div class="container">
-        <nav class="navbar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#service">Service</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#push-notification">Push</a></li>
+<body class="stretched sticky-responsive-menu">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="transparent-header sticky-transparent static-sticky">
+
+			<div id="header-wrap">
+
+				<div class="container clearfix">
+
+					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+					<!-- Logo
+					============================================= -->
+					<!-- <div id="logo">
+						<a href="index.html" class="standard-logo font-secondary ls3" style="line-height: 90px;">canvas</a>
+						<a href="index.html" class="retina-logo font-secondary ls3" style="line-height: 90px;">canvas</a>
+					</div>#logo end -->
+
+					<!-- Primary Navigation
+					============================================= -->
+					<nav id="primary-menu">
+
+						<ul class="one-page-menu" data-easing="easeInOutExpo" data-speed="1250" data-offset="0">
+							<li class="current"><a href="#" data-href="#wrapper"><i class="icon-line2-home"></i><div>Intro</div></a></li>
+							<li><a href="#" data-href="#section-skills"><i class="icon-line2-star"></i><div>Habilidades</div></a></li>
+							<li><a href="#" data-href="#section-about"><i class="icon-line2-user"></i><div>Acerca de mi</div></a></li>
+							<li><a href="#" data-href="#section-works"><i class="icon-line2-grid"></i><div>Portafolio</div></a></li>
+							<li><a href="#" data-href="#section-articles"><i class="icon-line2-pencil"></i><div>Articulos</div></a></li>
+							<li><a href="#" data-href="#footer"><i class="icon-line2-envelope"></i><div>Contacto</div></a></li>
+						</ul>
+
+					</nav><!-- #primary-menu end -->
+
+				</div>
+
+			</div>
+
+		</header><!-- #header end -->
+
+		<section id="slider" class="slider-element full-screen force-full-screen clearfix">
+			<div class="full-screen force-full-screen" style="position: fixed; width: 100%; background: #FFF url('https://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat top center; background-size: cover; background-attachment: fixed;">
+
+				<div class="container clearfix">
+					<div class="slider-caption dark slider-caption-right">
+						<h2 class="font-primary ls5" data-animate="fadeIn">Renzo Mayer</h2>
+						<p class="t300 ls1 d-none d-sm-block" data-animate="fadeIn" data-delay="400">Software Developer<br>Creo productos digitales.</p>
+						<!-- <a class="font-primary noborder ls1 topmargin-sm inline-block more-link text-white dark d-none d-sm-inline-block" data-animate="fadeIn" data-delay="800" data-scrollto="#section-works" data-offset="0" href="#"><u>My Works</u> &rarr;</a> -->
+					</div>
+				</div>
+
+			</div>
+			<div class="full-screen force-full-screen blurred-img" style="position: fixed; width: 100%; top: 0; left: 0; background: #FFF url('https://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat top center; background-size: cover; background-attachment: fixed;"></div>
+		</section>
+
+		<!-- Content
+		============================================= -->
+		<section id="content" class="nobg">
+
+			<div class="content-wrap nobottompadding nobg">
+
+				<div id="section-skills" class="section nomargin page-section dark nobg clearfix" style="padding-bottom: 50px">
+					<div class="container clearfix">
+						<div class="heading-block">
+							<h2 class="font-secondary center">Mis Herramientas.</h2>
+						</div>
+
+						<div class="col_one_third">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-html5" style="color: #DDD"></i></a>
+								</div>
+								<h3 class="t400 ls2" style="color: #FFF">HTML5</h3>
+								<p style="color:#AAA;">
+                  Diseño poderoso con funcionalidad, semántico y responsive que se puede adaptar a cualquier situación.</p>
+							</div>
+						</div>
+
+						<div class="col_one_third">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-code" style="color: #DDD"></i></a>
+								</div>
+								<h3 class="t400 ls2" style="color: #FFF">Javascript</h3>
+								<p style="color:#AAA;">Mi lenguaje preferido de programación en la web.</p>
+							</div>
+						</div>
+
+						<div class="col_one_third col_last">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-picture" style="color: #DDD"></i></a>
+								</div>
+								<h3 class="t400 ls2" style="color: #FFF">Imágenes</h3>
+								<p style="color:#AAA;">Geek de optimizacion de imágenes, ofrezco un rendimiento rápido e incomparable en la web.</p>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col_one_third">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-wordpress" style="color: #DDD"></i></a>
+								</div>
+								<h3 class="t400 ls2" style="color: #FFF">Wordpress</h3>
+								<p style="color:#AAA;">El sistema de gestión de contenido de código abierto más popular. </p>
+							</div>
+						</div>
+
+						<div class="col_one_third">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-line-layers" style="color: #DDD"></i></a>
+								</div>
+								<h3 class="t400 ls2" style="color: #FFF">Drupal</h3>
+								<p style="color:#AAA;">Muestre su contenido de forma atractiva utilizando las ultimas tendencias y el soporte de un framework de codigo abierto hecho para escalar.</p>
+							</div>
+						</div>
+
+						<div class="col_one_third col_last">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-line2-pencil" style="color: #DDD"></i></a>
+								</div>
+								<h3 class="t400 ls2" style="color: #FFF">Experiencia de Usuario</h3>
+                <p style="color:#AAA;">En busqueda de la mejora continua en la experiencia general de una persona que usa un producto digital.</p>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col_one_third">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-css3" style="color: #DDD"></i></a>
+								</div>
+								<h3 class="t400 ls2" style="color: #FFF">CSS3</h3>
+								<p style="color:#AAA;">La última evolución del lenguaje Cascading Style Sheets. Aportando muchas novedades a tus diseño web.</p>
+							</div>
+						</div>
+
+						<div class="col_one_third">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-subscript" style="color: #DDD"></i></a>
+								</div>
+								<h3 class="t400 ls2" style="color: #FFF">PHP</h3>
+								<p style="color:#AAA;">Mi otro lenguaje de confianza en la web.</p>
+							</div>
+						</div>
+
+						<div class="col_one_third col_last">
+							<div class="feature-box fbox-plain">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-search2" style="color: #DDD"></i></a>
+								</div>
+								<h3 class="t400 ls2" style="color: #FFF">Crecimiento Seo</h3>
+								<p style="color:#AAA;">Utilizo estrategias creativas y de bajo costo para ayudar a las empresas a adquirir y retener clientes.</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="section-about" class="section page-section nomargin clearfix" style="background: #EEE url('https://source.unsplash.com/8nebi46-k_M/1600x900') no-repeat center center; background-size: cover; padding: 100px 0">
+					<div class="container clearfix">
+						<div class="row clearfix">
+							<div class="col-md-5 offset-md-7 clearfix">
+								<div class="heading-block">
+									<h2 class="font-secondary"">Sobre mi.</h2>
+									<span>
+                    Soy un desarrollador de software con entusiasmo y enfoque en soluciones web. Me apasiona la creación de aplicaciones web inmersivas, hermosas y escalables a través de un código cuidadosamente diseñado enfocado en el usuario, además de crear sistemas que allanen el camino para la integración continua, la mejora continua y la entrega continua. Creo en el poder de un equipo diverso y unificado, y me enorgullezco de mi enfoque para resolver problemas de manera creativa.
+                    ¡Vamos a construir juntos!</span>
+								</div>
+								<table class="table">
+									<tbody>
+										<tr>
+											<td class="notopborder"><strong>Nombre:</strong></td>
+											<td class="notopborder">Renzo Mayer</td>
+										</tr>
+										<tr>
+											<td><strong>Email:</strong></td>
+											<td>noreply@canvas.com</td>
+										</tr>
+										<tr>
+											<td><strong>Celular:</strong></td>
+											<td>+59899771776</td>
+										</tr>
+										<tr>
+											<td><strong>Website:</strong></td>
+											<td>renzomayer.dev</td>
+										</tr>
+										<tr>
+											<td><strong>FDN:</strong></td>
+											<td>16 de enero de 1990</td>
+										</tr>
+										<tr>
+											<td><strong>País:</strong></td>
+											<td>Uruguay</td>
+										</tr>
+									</tbody>
+								</table>
+								<a href="#" class="button button-large button-border button-black button-dark noleftmargin"><i class="icon-line-cloud-download"></i> Proximamente descargar CV</a>
+							</div>
+						</div>
+					</div>
+					<div class="video-wrap">
+						<div class="video-overlay d-sm-block d-md-none" style="background: ur('https://source.unsplash.com/8nebi46-k_M/1600x900');"></div>
+					</div>
+				</div>
+
+				<div class="section nomargin skill-area bgcolor dark clearfix" style="padding: 80px 0;">
+					<div class="container clearfix">
+						<div class="row clearfix">
+							<div class="col-lg-4 col-md-6">
+								<h4>Educación</h4>
+								<div class="skill-info">
+									<span>
+										UTU Informática<br>
+										2006 – 2008
+									</span>
+									<span>
+										UTU Diseño y Pintura<br>
+										Degree in Computer Science<br>
+										2008 – 2010
+									</span>
+									<span>
+										Autodidacta<br>
+										2010 - Actualidad
+									</span>
+								</div>
+							</div>
+
+							<div class="w-100 bottommargin d-block d-md-none"></div>
+
+							<div class="col-lg-4 col-md-6">
+								<h4>Experiencia</h4>
+                <div class="skill-info">
+                  <span>
+                    2014 - Mayo 2019<br>
+                    Full Stack Developer<br>
+                    Desarrollo web en crovat ( vix.com )<br>
                 
-            </ul>
-        </nav>
-        <section id="home">
-            <h1>Renzo Mayer</h1>
-            <p class="lead">Maker, Web Developer, Forward Thinker</p>
-        </section>
-        <section id="about">
-            <h1>About</h1>
-            <p class="lead">I am a software developer with an enthusiasm and focus on web solutions. I am passionate
-                about building immersive, beautiful and scalable web applications through carefully crafted code and
-                user-centric design.</p>
-        </section>
-        <section id="service">
-            <h1>Service</h1>
-            <p class="lead">I am a full-stack web developer with over five years of experience.
+                  </span>
+                  <span>
+                    2014 - Web cooperativa Seraan<br>
+                    2018 - Implementacion de API para facturacion electrónica en cooperativa.
+                  </span>
+                </div>
+                </div>
 
-                I have maintained, developed and launched multiple projects from scratch, carrying the development of
-                its' back-end and front-end codebases.
-            </p>
-        </section>
-        <section id="contact">
-            <h1>Contact</h1>
-            <p class="lead">Let’s build together!</p>
-            <ul class="contact-links">
-                <li>
-                    <a href="https://github.com/renzit">
-                        <i class="fa fa-github fa-2x" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="www.linkedin.com/in/renzo-mayer-breitkreitz">
-                        <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://instagram.com/renzombreit">
-                        <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:rmayer.dev@gmail.com">
-                        <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <section id="push-notification">
-            <h1>Push Notification Test</h1>
-            <p>This page must be accessed using HTTPS or via localhost.</p>
-            <button class="js-notify-btn">Notify me!</button>
-            <button disabled class="js-push-btn">Enable Push Messaging</button><br><br>
-            <section class="js-sub-endpoint" style="display:none;width:80%">
-                <h3>Subscription Object:</h3>
-                <code class="js-subscription-json"></code><br><br><br>
-                <h3>Endpoint URL:</h3>
-                <code class="js-endpoint-url"></code>
-            </section>
-        </section>
+							<div class="w-100 bottommargin d-block d-lg-none clear"></div>
 
+							<div class="col-lg-4 col-12">
+								<h4>Habilidades</h4>
+								<ul class="skills">
+									<li data-percent="80">
+										<span>NodeJS</span>
+										<div class="progress">
+											<div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="85" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+										</div>
+									</li>
+									<li data-percent="60">
+										<span>CSS3</span>
+										<div class="progress">
+											<div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="70" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+										</div>
+									</li>
+									<li data-percent="90">
+										<span>HTML5</span>
+										<div class="progress">
+											<div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="90" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+										</div>
+									</li>
+									<li data-percent="70">
+										<span>Drupal</span>
+										<div class="progress">
+											<div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="80" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+										</div>
+									</li>
+									<li data-percent="70">
+										<span>Php</span>
+										<div class="progress">
+											<div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="52" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+										</div>
+									</li>
+								</ul>
+							</div>
 
-    </div>
-    <!-- <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('sw.js')
-                    .then(reg => {
-                        console.log('Service worker registered! 😎', reg);
-                    })
-                    .catch(err => {
-                        console.log('😥 Service worker registration failed: ', err);
-                    });
-            });
-        }
-    </script> -->
-    <script>
-        let deferredPrompt;
-        window.addEventListener('beforeinstallprompt', event => {
+						</div>
+					</div>
+				</div>
+<!-- 
+				<div id="section-works" class="section page-section nomargin clearfix" style="background: #EEE url('demos/resume/images/sections/2.jpg') no-repeat center right; background-size: cover; padding: 100px 0">
+					<div class="container clearfix">
+						<div class="row clearfix">
+							<div class="col-lg-5 offset-lg-1">
+								<div class="heading-block">
+									<h2 class="font-secondary">Latest Works.</h2>
+									<span class="notopmargin">Lorem ipsum dolor sit amet.</span>
+								</div>
+								<div class="row clearfix">
+									<div class="col-md-6">
+										<ul class="niche-demos-lists nobottommargin lists-1">
+											<li class="notopmargin"><a href="demo-restaurant.html"><img src="images/intro/niche/restaurant.jpg" alt="">Restaurant Demo</a></li>
+											<li><a href="demo-photography.html"><img src="images/intro/niche/photography.jpg" alt="">Photography</a></li>
+											<li><a href="demo-medical.html"><img src="images/intro/niche/medical.jpg" alt="">Medical</a></li>
+											<li><a href="demo-spa.html"><img src="images/intro/niche/spa.jpg" alt="">Spa</a></li>
+											<li><a href="demo-coffee.html"><img src="images/intro/niche/coffee.jpg" alt="">Coffee</a></li>
+											<li><a href="demo-interior-design.html"><img src="images/intro/niche/interior-design.jpg" alt="">Interior Design</a></li>
+											<li><a href="demo-barber.html"><img src="images/intro/niche/barber.jpg" alt="">Barber</a></li>
+										</ul>
+									</div>
+									<div class="col-md-6">
+										<ul class="niche-demos-lists nobottommargin lists-2">
+											<li><a href="demo-travel.html"><img src="images/intro/niche/travel.jpg" alt="">Travel</a></li>
+											<li><a href="demo-media-agency.html"><img src="images/intro/niche/media-agency.jpg" alt="">Media Agency</a></li>
+											<li><a href="demo-construction.html"><img src="images/intro/niche/construction.jpg" alt="">Construction</a></li>
+											<li><a href="demo-writer.html"><img src="images/intro/niche/writer.jpg" alt="">Writer</a></li>
+											<li><a href="demo-real-estate.html"><img src="images/intro/niche/real-estate/1.jpg" alt="">Real Estate</a></li>
+											<li><a href="demo-business.html"><img src="images/intro/niche/business.jpg" alt="">Business</a></li>
+											<li><a href="demo-app-landing.html"><img src="images/intro/niche/app-landing.jpg" alt="">App Landing</a></li>
+										</ul>
+									</div>
+								</div>
+								<a href="#" class="button button-large button-border button-black button-dark topmargin-sm noleftmargin"><i class="icon-line-stack-2"></i> See More Works</a>
+							</div>
+						</div>
+					</div>
+					<div class="video-wrap">
+						<div class="video-overlay d-block d-xl-none" style="background: rgba(255,255,255,0.9);"></div>
+					</div>
+				</div> -->
 
-            // Prevent Chrome 67 and earlier from automatically showing the prompt
-            event.preventDefault();
+				<div id="section-articles" class="section page-section nomargin clearfix" style="padding: 100px 0">
+					<div class="container clearfix">
 
-            // Stash the event so it can be triggered later.
-            deferredPrompt = event;
+						<!-- <div class="dark"> -->
+							<div class="heading-block">
+								<h2 class="font-secondary">Últimos artículos.</h2>
+								<!-- <span class="notopmargin">Lorem ipsum dolor sit amet.</span> -->
+							</div>
+						<!-- </div> -->
 
-            // Attach the install prompt to a user gesture
-            document.querySelector('#installBtn').addEventListener('click', event => {
+						<div id="posts" class="post-grid grid-3 clearfix">
 
-                // Show the prompt
-                deferredPrompt.prompt();
+							<div class="entry nobottomborder nobottompadding clearfix">
+								<div class="entry-box-shadow">
+									<div class="entry-image nobottommargin">
+										<a href="images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="https://source.unsplash.com/XJXWbfSo2f0/1600x900" alt="Standard Post with Image"></a>
+									</div>
+									<div class="entry-meta-wrapper">
+										<div class="entry-meta nomargin clearfix">
+											<a href="#" class="text-muted">13 de junio del 2019</a>
+										</div>
+										<div class="entry-title clearfix">
+											<h2><a href="#" style="">Próximamente...</a></h2>
+										</div>
+										<div class="entry-content clearfix">
+											<p class="nobottommargin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur...</p>
+										</div>
+									</div>
+								</div>
+							</div>
 
-                // Wait for the user to respond to the prompt
-                deferredPrompt.userChoice
-                    .then((choiceResult) => {
-                        if (choiceResult.outcome === 'accepted') {
-                            console.log('User accepted the A2HS prompt');
-                        } else {
-                            console.log('User dismissed the A2HS prompt');
-                        }
-                        deferredPrompt = null;
-                    });
-            });
+							<div class="entry nobottomborder nobottompadding clearfix">
+								<div class="entry-box-shadow">
+									<div class="entry-image nobottommargin">
+										<a href="images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="https://source.unsplash.com/4gKHjKG7ty4/1600x900" alt="Standard Post with Image"></a>
+									</div>
+									<div class="entry-meta-wrapper">
+										<div class="entry-meta nomargin clearfix">
+											<a href="#" class="text-muted">13 de junio del 2019</a>
+										</div>
+										<div class="entry-title clearfix">
+											<h2><a href="#">Próximamente...</a></h2>
+										</div>
+										<div class="entry-content clearfix">
+											<p class="nobottommargin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur...</p>
+										</div>
+									</div>
+								</div>
+							</div>
 
-            // Update UI notify the user they can add to home screen
-            document.querySelector('#installBanner').style.display = 'flex';
-        });
-    </script>
-    <script src="js/main.js"></script>
+							<div class="entry nobottomborder nobottompadding clearfix">
+								<div class="entry-box-shadow">
+									<div class="entry-image nobottommargin">
+										<a href="images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="https://source.unsplash.com/lud4OaUCP4Q/1600x900" alt="Standard Post with Image"></a>
+									</div>
+									<div class="entry-meta-wrapper">
+										<div class="entry-meta nomargin clearfix">
+											<a href="#" class="text-muted">13 de junio del 2019</a>
+										</div>
+										<div class="entry-title clearfix">
+											<h2><a href="#">Próximamente...</a></h2>
+										</div>
+										<div class="entry-content clearfix">
+											<p class="nobottommargin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur...</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="page-section dark noborder nopadding clearfix" style="background-color: #1C1C1C;">
+
+			<div class="container clearfix">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap clearfix" style="padding: 80px 0">
+					<div class="col_one_fourth">
+						<div class="footer-logo"><span class="t400 color ls1" style="font-size: 22px; ">Renzo Mayer.</span><br><small class="ls3 uppercase" style="color: rgba(255,255,255,0.2);">&copy; 2019.</small></div>
+					</div>
+					<div class="col_three_fourth col_last">
+						<div class="col_one_third">
+							<div class="widget widget_links clearfix">
+								<h4>Contacto</h4>
+								<div class="footer-content">
+									<abbr title="Phone Number"><strong>Phone:</strong></abbr> (+598) 99771776<br>
+									<abbr title="Email Address"><strong>Email:</strong></abbr> cassettes90@gmail.com
+								</div>
+							</div>
+						</div>
+						<div class="col_one_third">
+							<div class="widget clearfix">
+								<h4>Localización:</h4>
+								<div class="footer-content">
+									<address>
+										<strong>Centro de operacione:</strong><br>
+										Montevideo, Uruguay<br>
+									</address>
+								</div>
+							</div>
+						</div>
+						<div class="col_one_third col_last">
+							<div class="widget widget_links clearfix">
+								<h4>Social</h4>
+								<!-- <a href="#" class="social-icon nobg si-small si-light si-facebook">
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a> -->
+								<a href="#" class="social-icon nobg si-small si-light si-twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+								<a href="#" class="social-icon nobg si-small si-light si-instagram">
+									<i class="icon-instagram"></i>
+									<i class="icon-instagram"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights" style="background-color: #111;">
+
+				<div class="container clearfix">
+
+					<div class="col_full center nobottommargin">
+						Copyrights &copy; 2019 Todos los derechos reservados por Renzo Mayer<br>
+						<!-- <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div> -->
+					</div>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+
+	<script>
+		jQuery(window).scroll(function() {
+			var pixs = jQuery(window).scrollTop(),
+				opacity = pixs / 650,
+				element = jQuery( '.blurred-img' ),
+				elementHeight = element.outerHeight(),
+				elementNextHeight = jQuery('.content-wrap').find('.page-section').first().outerHeight();
+			if( ( elementHeight + elementNextHeight + 50 ) > pixs ) {
+				element.addClass('blurred-image-visible');
+				element.css({ 'opacity': opacity });
+			} else {
+				element.removeClass('blurred-image-visible');
+			}
+		});
+	</script>
+
 </body>
-
 </html>

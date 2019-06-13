@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Renzo Mayer</title>
+    <meta name="description" content="Full Stack Web Developer. See 'About' and 'Services' to read more.">
+    <link rel="canonical" href="https://www.renzomayer.dev" />
+    <link rel="alternate" href="https://www.renzomayer.dev" hreflang="en" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Renzo Mayer">
+    <meta name="apple-mobile-web-app-title" content="Renzo Mayer">
+    <meta name="msapplication-navbutton-color" content="black">
+    <meta name="theme-color" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/index.html">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135980720-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-135980720-1');
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Renzo Mayer",
+      "jobTitle": "Software Developer",
+      "email": "rmayer.dev@gmail.com",
+      "url": "https://www.renzomayer.dev"
+    }
+    </script>
+</head>
+
+<body>
+    <section id="installBanner" class="banner">
+        <button id="installBtn">Install app</button>
+    </section>
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#push-notification">Push</a></li>
+                
+            </ul>
+        </nav>
+        <section id="home">
+            <h1>Renzo Mayer</h1>
+            <p class="lead">Maker, Web Developer, Forward Thinker</p>
+        </section>
+        <section id="about">
+            <h1>About</h1>
+            <p class="lead">I am a software developer with an enthusiasm and focus on web solutions. I am passionate
+                about building immersive, beautiful and scalable web applications through carefully crafted code and
+                user-centric design.</p>
+        </section>
+        <section id="service">
+            <h1>Service</h1>
+            <p class="lead">I am a full-stack web developer with over five years of experience.
+
+                I have maintained, developed and launched multiple projects from scratch, carrying the development of
+                its' back-end and front-end codebases.
+            </p>
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+            <p class="lead">Let’s build together!</p>
+            <ul class="contact-links">
+                <li>
+                    <a href="https://github.com/renzit">
+                        <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="www.linkedin.com/in/renzo-mayer-breitkreitz">
+                        <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/renzombreit">
+                        <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:rmayer.dev@gmail.com">
+                        <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section id="push-notification">
+            <h1>Push Notification Test</h1>
+            <p>This page must be accessed using HTTPS or via localhost.</p>
+            <button class="js-notify-btn">Notify me!</button>
+            <button disabled class="js-push-btn">Enable Push Messaging</button><br><br>
+            <section class="js-sub-endpoint" style="display:none;width:80%">
+                <h3>Subscription Object:</h3>
+                <code class="js-subscription-json"></code><br><br><br>
+                <h3>Endpoint URL:</h3>
+                <code class="js-endpoint-url"></code>
+            </section>
+        </section>
+
+
+    </div>
+    <!-- <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => {
+                        console.log('Service worker registered! 😎', reg);
+                    })
+                    .catch(err => {
+                        console.log('😥 Service worker registration failed: ', err);
+                    });
+            });
+        }
+    </script> -->
+    <script>
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', event => {
+
+            // Prevent Chrome 67 and earlier from automatically showing the prompt
+            event.preventDefault();
+
+            // Stash the event so it can be triggered later.
+            deferredPrompt = event;
+
+            // Attach the install prompt to a user gesture
+            document.querySelector('#installBtn').addEventListener('click', event => {
+
+                // Show the prompt
+                deferredPrompt.prompt();
+
+                // Wait for the user to respond to the prompt
+                deferredPrompt.userChoice
+                    .then((choiceResult) => {
+                        if (choiceResult.outcome === 'accepted') {
+                            console.log('User accepted the A2HS prompt');
+                        } else {
+                            console.log('User dismissed the A2HS prompt');
+                        }
+                        deferredPrompt = null;
+                    });
+            });
+
+            // Update UI notify the user they can add to home screen
+            document.querySelector('#installBanner').style.display = 'flex';
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
