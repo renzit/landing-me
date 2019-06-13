@@ -3118,6 +3118,14 @@ body:not(.stretched) .slider-parallax .slider-parallax-inner { left: auto; }
 	right: 210px;
 }
 
+@media only screen and (max-width: 720px) {
+	.slider-caption.slider-caption-right{
+		right: auto;
+	}
+}
+
+
+
 .slider-caption.slider-caption-center {
 	position: relative;
 	max-width: 800px;
