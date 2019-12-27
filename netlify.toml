@@ -1,1 +1,4 @@
-/*  https://www.linkedin.com/in/renzo-mayer-breitkreitz/    200
+[[redirects]]
+  from = "/*"
+  to = "https://www.linkedin.com/in/renzo-mayer-breitkreitz/"
+  status = 200
