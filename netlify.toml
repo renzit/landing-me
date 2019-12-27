@@ -2,3 +2,4 @@
   from = "/*"
   to = "https://www.linkedin.com/in/renzo-mayer-breitkreitz/"
   status = 200
+  force = true
